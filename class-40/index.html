@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(226, 226, 226);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 13px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Introduction to JavaScript</h1>
+        <p>Our first steps in programming</p>
+    </main>
+    <!-- <script> tag is use from JavaScrpit code -->
+        <script>
+            // This is a JavaScript comment line.
+            
+            //JavaScript Data types
+            // Primative Data types
+             
+            //Numeric type
+            var number1 = 1457; // Entire positive number
+            var number2 = -456; // Entire negative number 
+            var pi = 3.141592;  // Float positive number
+            var number3 = -14.56; // Float negative number
+
+            var number4 = BigInt(3433423454344554345343);
+            var number5 = BigInt(7655675647826373823345);
+
+            //Basic arithmetic operations
+            var addition = number1 + number2; // addition
+            var subtraction = number1 - number2; // substraction
+            var multiplication = number1 * 3; // multiplication
+            var division = number1 / 3; // division
+            
+            // print the results
+            console.log("addition: number1", number1, " + number 2", number2, " is: ", addition);
+            console.log("subtraction: number1", number1, " - number 2", number2, " is: ", subtraction);
+            console.log("multiplication: number1", number1, " * number 2", number2, " is: ", multiplication);
+            console.log("division: number1", number1, " / number 2", number2, " is: ", division);
+            console.log("=======================================");
+            /*
+                Multiline
+                comment
+            */
+            /*
+                IMPORTANT
+                Don't mix BigInt with Numbers in operations
+            */
+           console.log("=======================================");
+           var sum = number4 + number5; // Addition
+           var difference = number5 - number4; // Subtraction
+           var product = number4 * number5; // product
+           var division = number5 / number4; // Division
+           var remainder = number5 % number4; // Modules
+           //Print the results
+           console.log(number4, " + ",  number5, " = ", sum );
+           console.log(number5, " - ", number4, " = ", difference);
+           console.log(number4, " * ", number5, " = ", product);
+           console.log(number5, " / ", number4, " = ", division);
+           console.log(number5, " % ", number4, " = ", remainder);
+           console.log("=======================================");
+           console.log(typeof(number1));
+           console.log(typeof(number5));
+       </script>
+</body>
+</html>

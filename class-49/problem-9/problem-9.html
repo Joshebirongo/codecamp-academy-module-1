@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 9</title>
+</head>
+
+<body>
+    <main>
+        <h1>Problem 9</h1>
+        <section>
+            <h1>Exercise: Gym Membership Discount</h1>
+
+            <h2>Description</h2>
+            <p>
+                A gym wants to determine the discount a customer receives when 
+                purchasing a membership. The discount depends on the customer's 
+                age and whether they are a student.
+            </p>
+
+            <h2>Inputs</h2>
+            <ul>
+                <li>Customer age</li>
+                <li>Student status (yes or no)</li>
+            </ul>
+
+            <h2>Rules</h2>
+            <ul>
+                <li>If the age is less than 0 → print <strong>"Invalid age"</strong>.</li>
+                <li>If the customer is under 18:
+                    <ul>
+                        <li>If the customer is a student → <strong>"50% discount"</strong></li>
+                        <li>Otherwise → <strong>"30% discount"</strong></li>
+                    </ul>
+                </li>
+                <li>If the customer is 18 or older:
+                    <ul>
+                        <li>If the customer is a student → <strong>"20% discount"</strong></li>
+                        <li>Otherwise → <strong>"No discount"</strong></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Example Input</h2>
+            <p>Age: 16</p>
+            <p>Student: yes</p>
+
+            <h2>Output</h2>
+            <p>50% discount</p>
+        </section>
+
+    </main>
+    <script type="application/javascript" src="./problem-9.js"></script>
+</body>
+
+</html>

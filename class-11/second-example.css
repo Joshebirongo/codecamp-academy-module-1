@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.6rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+
+.feature {
+    background-color: white;
+    padding: 2.4rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1.4rem;
+}
+
+.cta {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.cta h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.cta button {
+    font-size: 1.6rem;
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.6rem;
+    font-size: 1.3rem;
+    background-color: #ddd;
+}
+
+/* MEDIA QUERIES */
+
+/* small devices*/
+@media screen and (min-width:300px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .feature {
+        padding: 2rem;
+    }
+}
+@media screen and (min-width: 301px) and (max-width: 600px) {
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .feature {
+        flex: 1 1 45%;
+    }
+}
+@media screen and (min-width: 601px) {
+    .features {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .feature {
+        flex: 1;
+        max-width: 24%;
+    }
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .cta h2 {
+        font-size: 2,8rem;
+    }
+}

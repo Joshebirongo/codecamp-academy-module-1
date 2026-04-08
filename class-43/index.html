@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <main>
+        <h1>JavaScript Data Types</h1>
+    </main>
+    <script>
+        // Here start the JavaScript code
+        var name;
+        console.log(name);
+        console.log("The variables 'name' Data type is:" + typeof(name));
+
+        var a = undefined;// undefined (automatic)
+        var b = null; // null (intentional)
+
+        /* 
+        undefined   => JavaScript didn't assign a value
+        null        => You intentionnaly det "no value"
+        */
+        
+        console.log(a); // ?
+        console.log("The variables 'a' Data type is:" + typeof(a));
+    
+        console.log(b); // ?
+        console.log("The variables 'b' Data type is:" + typeof(b));
+
+        /* 
+            Real-world analogy
+            undefined    => You ordered food, but hasn't arrived yet.
+            null         => You decided not to order anything.
+        */
+
+        /*
+            undefined isn't an error. It's just JavaScript telling
+            you "there's nothing here yet." 
+        */
+
+        console.log(c); // ?
+        console.log("The variables 'c' Data type is:" + typeof(c));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary Operator in JavaScript</title>
+    <link rel="stylesheet" href="ternaryOperator.css" />
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Ternary Operator in JavaScript</h1>
+            <p class="subtitle">
+                Imperative Programming – Conditional Expressions
+            </p>
+        </header>
+
+        <section class="card">
+            <h2>What is the Ternary Operator?</h2>
+            <p>
+                The <strong>ternary operator</strong> is a shorter way to write a
+                simple <code>if...else</code> conditional in JavaScript.
+            </p>
+            <p>
+                It evaluates a <strong>condition</strong> and returns one of two
+                values depending on whether the condition is <strong>true</strong>
+                or <strong>false</strong>.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Syntax</h2>
+
+            <pre><code>condition ? valueIfTrue : valueIfFalse;</code></pre>
+
+            <p class="explanation">
+                The operator has three parts:
+            </p>
+
+            <ul>
+                <li>The condition</li>
+                <li>The value if the condition is true</li>
+                <li>The value if the condition is false</li>
+            </ul>
+
+        </section>
+
+        <section class="card">
+            <h2>Example with if...else</h2>
+
+            <pre><code>
+                let age = 20;
+                let message;
+
+                if (age >= 18) {
+                    message = "You are an adult";
+                } else {
+                    message = "You are a minor";
+                }
+            </code></pre>
+
+        </section>
+
+        <section class="card">
+            <h2>Same Example with Ternary Operator</h2>
+
+            <pre><code>
+                let age = 20;
+
+                let message = age >= 18
+                ? "You are an adult"
+                : "You are a minor";
+            </code></pre>
+
+        </section>
+
+        <section class="card">
+            <h2>Example</h2>
+
+            <pre><code>
+                let score = 75;
+
+                let result = score >= 60
+                ? "Student passed"
+                : "Student failed";
+
+                console.log(result);
+            </code></pre>
+
+        </section>
+
+        <section class="card">
+            <h2>When to Use It</h2>
+
+            <ul>
+                <li>When the condition is simple</li>
+                <li>When there are only two possible results</li>
+                <li>When assigning a value based on a condition</li>
+            </ul>
+
+            <p class="warning">
+                ⚠️ If the logic becomes complex, it is better to use
+                <code>if...else</code> for readability.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script type="application/javascript" src="./ternaryOperator.js"></script>
+</body>
+
+</html>

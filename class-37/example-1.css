@@ -1,0 +1,169 @@
+/* =====================
+VARIABLES (IMPROVED UX)
+===================== */
+:root {
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+
+    --accent: #6424fb;
+    --text-main: #1f2937;
+    --text-muted: #64748b;
+
+    --shadow-soft: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 1.6rem 3rem rgba(0, 0, 0, 0.15);
+
+    --challenge: hsl(228, 93%, 21%);
+}
+
+/* =====================
+BASE
+===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* =====================
+LAYOUT
+===================== */
+.layout {
+    max-width: 80rem;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--text-main);
+}
+
+/* =====================
+FEATURES
+===================== */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.feature {
+    background-color: var(--card-bg);
+    padding: 2.6rem;
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0, 3s ease,
+        color 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-4px);
+    background-color: var(--primary);
+    color: white;
+    box-shadow: var(--shadow-hover);
+}
+
+.challenge {
+    animation: 2.5s ease-in-out infinite;
+}
+
+.challenge:hover {
+    background-color: var(--challenge);
+    transform: translateY(10px);
+}
+
+/* ==========================
+ANIMATION (REFINED)
+======================== */
+
+.highlight {
+    border: 10px solid var(--accent);
+    animation: michael 2.5s ease-in-out infinite;
+}
+
+@keyframes michael {
+    0% {
+        box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 16px rgba(251, 191, 36, 0.45);
+    }
+
+    100% {
+        box-shadow: rgba(251, 191, 36, 0);
+    }
+}
+
+
+/*==============================
+MEDIA QUERIES
+=========================== */
+@media screen and (max-width: 300px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .feature {
+        font-size: 1.4rem;
+        padding: 2.2rem;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 600px) {
+    .features {
+        gap: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        flex: 1 1 45%;
+    }
+
+}
+
+@media screen and (min-width: 901px) {
+    .features {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feature {
+        flex: 1;
+        max-width: 24%;
+    }
+
+    .title {
+        font-size: 3.6rem;
+    }
+}

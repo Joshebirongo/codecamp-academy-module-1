@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Use let and const Instead of var in JavaScript</title>
+    <link rel="stylesheet" href="./es6.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>
+                Why Use <code>let</code> and <code>const</code> Instead of
+                <code>var</code> in JavaScript
+            </h1>
+            <p>A modern JavaScript explanation for beginner developers.</p>
+        </header>
+
+        <article>
+
+            <section>
+                <h2>What is ES6?</h2>
+
+                <p>
+                    ES6 (ECMAScript 2015) is a major update to JavaScript that
+                    introduced many modern features to improve code readability,
+                    reliability, and scalability.
+                </p>
+
+                <p>Some of the most important ES6 features include:</p>
+
+                <ul>
+                    <li><code>let</code> and <code>const</code></li>
+                    <li>Arrow functions</li>
+                    <li>Template literals</li>
+                    <li>Classes</li>
+                    <li>Modules</li>
+                    <li>Destructuring</li>
+                </ul>
+
+                <p>
+                    One of the most important improvements introduced in ES6 was
+                    better variable declaration using <strong>let</strong> and
+                    <strong>const</strong>.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>The Problem with <code>var</code></h2>
+
+                <p>
+                    Before ES6, JavaScript only had <code>var</code> for declaring
+                    variables. However, <code>var</code> has several problems that
+                    often cause bugs in applications.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>1. Scope Problems</h2>
+
+                <p>
+                    <code>var</code> is <strong>function scoped</strong>, while
+                    <code>let</code> and <code>const</code> are <strong>block scoped</strong>.
+                </p>
+
+                <h3>Example using var</h3>
+
+                <pre><code>
+                    if (true) {
+                        var message = "Hello";
+                    }
+
+                    console.log(message);
+                </code></pre>
+
+                <p>
+                    The variable is still accessible outside the block.
+                </p>
+
+                <h3>Example using let</h3>
+
+                <pre><code>
+                    if (true) {
+                        let message = "Hello";
+                    }
+
+                    console.log(message); // ReferenceError
+                </code></pre>
+
+                <p>
+                    Because <code>let</code> respects block scope, the variable
+                    cannot be accessed outside.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>2. Variable Redeclaration</h2>
+
+                <p>
+                    With <code>var</code>, variables can be redeclared in the same scope.
+                </p>
+
+                <pre><code>
+                    var name = "John";
+                    var name = "Ana";
+
+                    console.log(name);
+                </code></pre>
+
+                <p>
+                    This can overwrite variables and cause unexpected bugs.
+                </p>
+
+                <p>
+                    Using <code>let</code> prevents this mistake:
+                </p>
+
+                <pre><code>
+                    let name = "John";
+                    let name = "Ana"; // Error
+                </code></pre>
+
+            </section>
+
+            <section>
+
+                <h2>3. Hoisting Confusion</h2>
+
+                <p>
+                    Variables declared with <code>var</code> are hoisted and initialized
+                    with
+                    <code>undefined</code>.
+                </p>
+
+                <pre><code>
+                    console.log(age);
+                    var age = 20;
+                </code></pre>
+
+                <p>
+                    This prints <code>undefined</code>, which can confuse developers.
+                </p>
+
+                <p>
+                    With <code>let</code>:
+                </p>
+
+                <pre><code>
+                    console.log(age);
+                    let age = 20; // ReferenceError
+                </code></pre>
+
+                <p>
+                    This prevents accessing variables before they are declared.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>4. Using const</h2>
+
+                <p>
+                    <code>const</code> creates variables that cannot be reassigned.
+                </p>
+
+                <pre><code>
+                    const PI = 3.1416;
+
+                    PI = 3.14; // Error
+                </code></pre>
+
+                <p>
+                    This is useful for values that should never change.
+                </p>
+
+                <pre><code>
+                    const API_URL = "https://api.example.com";
+                    const MAX_USERS = 100;
+                </code></pre>
+
+            </section>
+
+            <section>
+
+                <h2>Modern JavaScript Best Practice</h2>
+
+                <p>
+                    Most professional developers follow this rule:
+                </p>
+
+                <ul>
+                    <li>Use <strong>const</strong> by default</li>
+                    <li>Use <strong>let</strong> if the value will change</li>
+                    <li>Avoid <strong>var</strong></li>
+                </ul>
+
+                <pre><code>
+                    const tax = 0.19;
+                    let total = 100;
+
+                    total = total + total * tax;
+
+                    console.log(total);
+                </code></pre>
+
+            </section>
+
+            <section>
+
+                <h2>Quick Comparison</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Keyword</th>
+                            <th>Scope</th>
+                            <th>Reassign</th>
+                            <th>Redeclare</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>var</td>
+                            <td>Function</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <td>let</td>
+                            <td>Block</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+
+                        <tr>
+                            <td>const</td>
+                            <td>Block</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section>
+
+                <h2>Conclusion</h2>
+
+                <p>
+                    ES6 introduced <code>let</code> and <code>const</code> to make
+                    JavaScript safer, more predictable, and easier to maintain.
+                </p>
+
+                <p>
+                    For modern JavaScript development, avoid <code>var</code> and
+                    prefer <code>const</code> or <code>let</code>.
+                </p>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</body>
+
+</html>

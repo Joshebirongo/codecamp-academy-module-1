@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditionals | Professional Guide</title>
+
+    <link rel="stylesheet" href="./index.css">
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>JavaScript Conditionals</h1>
+            <p>Professional guide to decision making in JavaScript</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Introduction</h2>
+
+            <p>
+                Conditionals allow programs to make decisions. A program can execute
+                different code depending on whether a condition is <strong>true</strong>
+                or <strong>false</strong>.
+            </p>
+
+            <p>
+                In software engineering, conditionals are fundamental for building
+                logic, validation systems, APIs, authentication flows, and user
+                interfaces.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>The if Statement</h2>
+
+            <p>
+                The <code>if</code> statement executes a block of code only if a
+                condition evaluates to <strong>true</strong>.
+            </p>
+
+            <pre><code>
+                if (condition) {
+                // code executes if condition is true
+                }
+            </code></pre>
+
+            <h3>Example</h3>
+
+            <pre><code>
+                const age = 20;
+
+                if (age >= 18) {
+                    console.log("User is an adult");
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>if / else</h2>
+
+            <p>
+                The <code>else</code> block runs when the condition is false.
+            </p>
+
+            <pre><code>
+                const age = 16;
+
+                if (age >= 18) {
+                    console.log("Adult");
+                } else {
+                    console.log("Minor");
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>else if</h2>
+
+            <p>
+                The <code>else if</code> statement allows evaluating multiple conditions.
+            </p>
+
+            <pre><code>
+                const score = 85;
+
+                if (score >= 90) {
+                    console.log("Excellent");
+                } else if (score >= 70) {
+                    console.log("Good");
+                } else {
+                    console.log("Needs improvement");
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>Comparison Operators</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>===</td>
+                        <td>Strict equality</td>
+                        <td>a === b</td>
+                    </tr>
+
+                    <tr>
+                        <td>!==</td>
+                        <td>Not equal</td>
+                        <td>a !== b</td>
+                    </tr>
+
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Greater than</td>
+                        <td>a &gt; b</td>
+                    </tr>
+
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Less than</td>
+                        <td>a &lt; b</td>
+                    </tr>
+
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Greater or equal</td>
+                        <td>a &gt;= b</td>
+                    </tr>
+
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Less or equal</td>
+                        <td>a &lt;= b</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section>
+
+            <h2>Logical Operators</h2>
+
+            <h3>AND ( && )</h3>
+
+            <p>
+                The AND operator requires both conditions to be true.
+            </p>
+
+            <pre><code>
+                const age = 25;
+                const hasLicense = true;
+
+                if (age >= 18 && hasLicense) {
+                    console.log("User can drive");
+                }
+            </code></pre>
+
+            <h3>OR ( || )</h3>
+
+            <p>
+                The OR operator requires at least one condition to be true.
+            </p>
+
+            <pre><code>
+                const isAdmin = false;
+                const isModerator = true;
+
+                if (isAdmin || isModerator) {
+                    console.log("User has access");
+                }
+            </code></pre>
+
+            <h3>NOT ( ! )</h3>
+
+            <p>
+                The NOT operator reverses a boolean value.
+            </p>
+
+            <pre><code>
+                const loggedIn = false;
+
+                if (!loggedIn) {
+                    console.log("Please log in");
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>Nested Conditionals</h2>
+
+            <p>
+                Sometimes conditionals must exist inside other conditionals.
+            </p>
+
+            <pre><code>
+                const age = 20;
+                const hasLicense = true;
+
+                if (age >= 18) {
+
+                    if (hasLicense) {
+                        console.log("User can drive");
+                    }
+
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>Real World Example</h2>
+
+            <p>
+                A typical backend validation example.
+            </p>
+
+            <pre><code>
+                const salary = 2500;
+                const creditScore = 720;
+
+                if (salary >= 2000 && creditScore >= 700) {
+                    console.log("Loan Approved");
+                } else {
+                    console.log("Loan Rejected");
+                }
+            </code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>Best Practices</h2>
+
+            <ul>
+                <li>Always use <strong>strict comparison (===)</strong></li>
+                <li>Keep conditions simple</li>
+                <li>Avoid deeply nested conditionals</li>
+                <li>Use meaningful variable names</li>
+                <li>Extract complex logic into functions</li>
+            </ul>
+
+        </section>
+
+        <section>
+
+            <h2>Interactive Example</h2>
+
+            <p>Open the browser console to see the examples executed.</p>
+
+            <button id="runExamples">Run Conditional Examples</button>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>JavaScript Fundamentals Course</p>
+    </footer>
+
+</body>
+
+</html>

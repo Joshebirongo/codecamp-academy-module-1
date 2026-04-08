@@ -1,0 +1,160 @@
+/* =========================
+DESIGN VARIABLES
+========================= */
+:root {
+    --page-bg: #020617;
+
+    --hero: #2563eb;
+    --nav: #0ea5e9;
+
+    --article-1: #22c55e;
+    --article-2: #a855f7;
+    --article-3: #f97316;
+
+    --aside: #eab308;
+    --footer: #ef4444;
+}
+
+/* =========================
+BASE RESET
+========================= */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 2rem;
+    background-color: var(--page-bg);
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* =========================
+GRID CONTAINER
+========================= */
+.layout {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.8rem;
+}
+
+/* =========================
+BLOCK STYLES
+========================= */
+.block {
+    border-radius: 1.4rem;
+    min-height: 10rem;
+}
+
+/* Color mapping */
+.hero {
+    background-color: var(--hero);
+}
+
+.nav {
+    background-color: var(--nav);
+}
+
+.article-1 {
+    background-color: var(--article-1);
+}
+
+.article-2 {
+    background-color: var(--article-2);
+}
+
+.article-3 {
+    background-color: var(--article-3);
+}
+
+.aside {
+    background-color: var(--aside);
+}
+
+.footer {
+    background-color: var(--footer);
+}
+
+/* =========================
+MEDIA QUERIES
+========================= */
+
+/* 300px - 600px (Mobile: featured + list) */
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+    .block {
+        min-height: 8rem;
+    }
+    
+}
+/* 601px - 900px (Tablet: featured + list)*/
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .layout {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "hero hero"
+        "nav nav"
+        "article-1 aside"
+        "article-2 aside"
+        "article-3 aside"
+        "footer footer"
+        ;
+    }
+    .hero {grid-area: hero;}
+    .nav { grid-area: nav;}
+    .article-1 { grid-area: article-1;}
+    .article-2 { grid-area: article-2;}
+    .article-3 { grid-area: article-3;}
+    .aside { grid-area: aside;}
+    .footer { grid-area: footer;}
+}
+/* 901px - 1200px (Desktop: magazine layout) */
+@media screen and (min-width: 901px) and (max-width: 1200px){
+    .layout {
+        grid-template-columns: 3fr 2fr 1.5fr;
+        grid-template-areas: 
+        "hero hero nav"
+        "article-1 article-2 aside"
+        "article-3 article-2 aside"
+        "footer footer footer"
+        ;
+    }
+    .hero { grid-area: hero;}
+    .nav { grid-area: nav;}
+    .article-1 { grid-area: article-1;}
+    .article-2 { grid-area: article-2;}
+    .article-3 { grid-area: article-3;}
+    .aside { grid-area: aside;}
+    .footer { grid-area: footer;}
+}
+
+/* >1200px (Large screens: editorial layout)*/
+@media screen and (min-width: 1201px) {
+    .layout {
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-areas: 
+        "hero hero hero"
+        "nav nav article-2"
+        "aside article-1 article-2"
+        "aside article-3 article-3"
+        "footer footer footer"
+        ;
+    }
+    .hero { grid-area: hero;}
+    .nav { grid-area: nav;}
+    .article-1 { grid-area: article-1;}
+    .article-2 { grid-area: article-2;}
+    .article-3 { grid-area: article-3;}
+    .aside { grid-area: aside;}
+    .footer { grid-area: footer;}
+}

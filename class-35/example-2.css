@@ -1,0 +1,104 @@
+/* =====================
+VARIABLES
+===================== */
+:root {
+    --bg-main: #eef2f7;
+    --card-bg: #ffffff;
+    --primary: #6366f1;
+    --accent: #22c55e;
+    --text-main: #1f2937;
+    --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+/* =====================
+BASE
+===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background-color: var(--bg-main);
+}
+
+/* =====================
+LAYOUT
+===================== */
+.container {
+    max-width: 40rem;
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* =====================
+NOTIFICATION (TRANSITION)
+===================== */
+.notification {
+    background-color: var(--card-bg);
+    padding: 2.8rem;
+    border-radius: 1.4rem;
+    box-shadow: var(--shadow);
+    transition: 
+        transform 0.4s ease
+        box-shadow 0.4s ease;
+}
+
+.notification:hover {
+    transform: translateY(-0.8rem);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.notification h2 {
+    font-size: 2.2rem;
+    color: var(--text-main);
+}
+
+.notification p {
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+    color: #555;
+}
+
+/* =====================
+PROGRESS BAR (ANIMATION)
+===================== */
+.progress {
+    height: 1.2rem;
+    background-color: #d1d5db;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent);
+    animation: load 3s ease-in-out infinite;
+}
+
+/* =====================
+KEYFRAMES
+===================== */
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

@@ -1,0 +1,144 @@
+/* =========================
+CSS VARIABLES
+========================= */
+:root {
+    --bg-page: #0b1220;
+
+    --header: #38bdf8;
+    --sidebar: #22c55e;
+    --widget-1: #a855f7;
+    --widget-2: #f97316;
+    --widget-3: #eab308;
+    --footer: #ef4444;
+}
+
+/* =========================
+BASE SETUP
+========================= */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 2rem;
+    background-color: var(--bg-page);
+    font-family: system-ui, sans-serif;
+}
+
+/* =========================
+DASHBOARD GRID
+========================= */
+.dashboard {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.6rem;
+}
+
+/* =========================
+BOXES
+========================= */
+.box {
+    border-radius: 1.2rem;
+    min-height: 10rem;
+    font-size: 3rem;
+    gap: 1.6rem;
+}
+
+/* Assign colors */
+.header {
+    background-color: var(--header);
+}
+
+.sidebar {
+    background-color: var(--sidebar);
+}
+
+.widget-1 {
+    background-color: var(--widget-1);
+}
+
+.widget-2 {
+    background-color: var(--widget-2);
+}
+
+.widget-3 {
+    background-color: var(--widget-3);
+}
+
+.footer {
+    background-color: var(--footer);
+}
+
+/* =========================
+MEDIA QUERIES
+========================= */
+
+/* 300px – 600px (Mobile: stacked layout) */
+@media (max-width: 60rem) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        min-height: 9rem;
+    }
+}
+
+/*601px - 900px (Tablet: sidebar + content)*/
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "sidebar widget-1"
+        " sidebar widget-2"
+        "sidebar widget-3"
+        "footer footer"
+
+        ;
+    }
+    .header { grid-area: header;}
+    .sidebar { grid-area: sidebar;}
+    .widget-1 { grid-area: widget-1;}
+    .widget-2 { grid-area: widget-2;}
+    .widget-3 { grid-area: widget-3;}
+    .footer { grid-area: footer;}
+}
+/*901 px - 1200px (Desktop: dashboard grid */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .dashboard {
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar widget-1"
+        "sidebar widget-2"
+        "footer footer";
+    }
+    .widget-3 {
+        display: none;
+        /* intentionally removed to show layout change */
+    }
+}
+/* >1200px (Large screens: full dashboard */
+@media screen and (min-width: 1201px) {
+    .dashboard {
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-areas: 
+        /*challenge */
+        "header header"
+        "sidebar widget-1"
+        "sidebar widget-2"
+        "sidebar widgwt-3"
+        "footer footer";
+    }
+}
+

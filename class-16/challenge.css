@@ -1,0 +1,116 @@
+:root {
+    --primary: #1e40af;
+    --secondary: #0f172a;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #111827;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* =========================
+BASE: small phones (≤300)
+========================= */
+.app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--primary);
+    color: white;
+    padding: 2.4rem;
+}
+
+.header h1 {
+    font-size: 2.6rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--secondary);
+    color: white;
+    padding: 2rem;
+}
+
+.sidebar h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.sidebar li {
+    list-style: none;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.main {
+    grid-area: main;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card);
+    padding: 2.4rem;
+    border-radius: 1rem;
+}
+
+.metric {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #e5e7eb;
+    text-align: center;
+    padding: 1.6rem;
+    font-size: 1.3rem;
+}
+
+/* =========================
+300–600px
+========================= */
+@media (min-width: 300px) and (max-width: 600px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+601–900px (tablet)
+========================= */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+      
+    }
+/* =========================
+901–1200px (laptop)
+========================= */
+
+/* =========================
+>1200px (desktop)
+========================= */

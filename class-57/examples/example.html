@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Switch Statement Example</title>
+
+    <link rel="stylesheet" href="./problem-1.js">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>JavaScript Switch Example</h1>
+        <p>Matching Numbers (1–7) with Days of the Week</p>
+    </header>
+
+    <main class="container">
+
+        <section class="lesson">
+
+            <h2>Problem Description</h2>
+
+            <p>
+                In many programs we need to compare a variable against several 
+                possible values. When a variable has a limited set of possible 
+                values, the <strong>switch statement</strong> can provide a 
+                cleaner and more readable alternative to multiple
+                <code>if / else if</code> conditions.
+            </p>
+
+            <p>
+                In this example, we want to create a small algorithm that receives 
+                a number between <strong>1 and 7</strong> and prints the corresponding 
+                day of the week.
+            </p>
+
+        </section>
+
+        <section class="lesson">
+
+            <h2>Switch Algorithm</h2>
+
+            <pre>
+                <code>
+                    // Author: Cristian Camilo Cortes Ortiz
+
+                    const dayNumber = 3;
+
+                    switch (dayNumber) {
+
+                    case 1:
+                        console.log("Monday");
+                        break;
+
+                    case 2:
+                        console.log("Tuesday");
+                        break;
+
+                    case 3:
+                        console.log("Wednesday");
+                        break;
+
+                    case 4:
+                        console.log("Thursday");
+                        break;
+
+                    case 5:
+                        console.log("Friday");
+                        break;
+
+                    case 6:
+                        console.log("Saturday");
+                        break;
+
+                    case 7:
+                        console.log("Sunday");
+                        break;
+
+                    default:
+                        console.log("Invalid number");
+
+                }
+            </code>
+        </pre>
+
+        </section>
+
+        <section class="lesson">
+
+            <h2>Explanation</h2>
+
+            <ul>
+
+                <li>
+                    The variable <code>dayNumber</code> contains the value we want 
+                    to evaluate.
+                </li>
+
+                <li>
+                    The <code>switch</code> statement compares this value with each 
+                    <code>case</code>.
+                </li>
+
+                <li>
+                    When a case matches, the corresponding code block is executed.
+                </li>
+
+                <li>
+                    The <code>break</code> statement stops execution to prevent the 
+                    program from continuing into the next cases.
+                </li>
+
+                <li>
+                    The <code>default</code> clause runs when none of the cases 
+                    match the value.
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="lesson">
+
+            <h2>Example Outputs</h2>
+
+            <table>
+
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Monday</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Wednesday</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Saturday</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>Invalid number</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>Imperative Programming with JavaScript</p>
+
+    </footer>
+
+    <script type="application/javascript" src="./example-1.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+/* ========================
+CSS VARIABLES
+======================== */
+:root {
+    --bg-page: #0f172a;
+
+    --box-1: #38bdf8;
+    --box-2: #22c55e;
+    --box-3: #f97316;
+    --box-4: #a855f7;
+    --box-5: #eab308;
+    --box-6: #ef4444;
+}
+
+/* ========================
+BASE CONFIG
+======================== */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--bg-page);
+    font-family: system-ui, sans-serif;
+}
+
+/* ========================
+GRID CONTAINER
+======================== */
+.grid-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.6rem;
+}
+
+/* ========================
+BOXES
+======================== */
+.box {
+    height: 12rem;
+    border-radius: 1.2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Box colors via variables */
+.box-1 {
+    background-color: var(--box-1);
+}
+
+.box-2 {
+    background-color: var(--box-2);
+}
+
+.box-3 {
+    background-color: var(--box-3);
+}
+
+.box-4 {
+    background-color: var(--box-4);
+}
+
+.box-5 {
+    background-color: var(--box-5);
+}
+
+.box-6 {
+    background-color: var(--box-6);
+}
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .box {
+        height: 10rem;
+    }
+}
+/*601px - 900px (Tablet: two columns) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box {
+        height: 12rem;
+    }
+}
+/*901px - 1200px (Desktop: three columns) */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .box {
+        height: 20rem;
+    }
+}
+/*> 1200px (large desktop: feature layout) */
+@media screen and (min-width: 1201px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .box {
+        height: 25rem;
+    }
+    .box-1 {
+        grid-column: span 2;
+    }
+    .box-5 {
+        grid-column: span 3;
+    }
+    .box-6 {
+        grid-column: span 4;
+    }
+}
