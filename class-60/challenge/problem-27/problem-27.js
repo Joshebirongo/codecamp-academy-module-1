@@ -1,7 +1,7 @@
 // Author : Muliri Shebirongo Jonathan <Joshebirongo>
 
 // Given variables
-const kwhUsed = 100;
+const kwhUsed = 200;
 const customerType = 3;
 
 // Global variable to store the price per kwh
