@@ -1,4 +1,4 @@
-// Author : Muliri Shebirongo Jonathan
+// Author : Muliri Shebirongo Jonathan <Joshebirongo>
 
 // Variables
 let evenCount = 0;
