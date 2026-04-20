@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript While and Do While Loops</title>
+
+    <link rel="stylesheet" href="while.css" />
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>JavaScript Loops: While & Do...While</h1>
+        <p class="subtitle">
+            Understanding conditional loops in JavaScript
+        </p>
+    </header>
+
+    <main class="container">
+
+        <section class="lesson-section">
+
+            <h2>What is a Loop?</h2>
+
+            <p>
+                A loop allows a program to execute a block of code repeatedly while 
+                a specific condition remains true. Loops are essential when we need 
+                to perform repetitive tasks without writing the same code multiple 
+                times.
+            </p>
+
+            <p>
+                In this lesson we will study two conditional loops:
+            </p>
+
+            <ul>
+                <li><strong>while</strong> loop</li>
+                <li><strong>do...while</strong> loop</li>
+            </ul>
+
+        </section>
+
+        <section class="lesson-section">
+
+            <h2>The While Loop</h2>
+
+            <p>
+                The <code>while</code> loop executes a block of code repeatedly 
+                as long as a given condition evaluates to <strong>true</strong>.
+            </p>
+
+            <p>
+                The condition is checked <strong>before</strong> each iteration. 
+                If the condition is false from the beginning, the loop will never 
+                run.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <pre>
+                <code>
+                    while (condition) {
+                        // code to execute
+                    }
+                </code>
+            </pre>
+
+            <article class="example">
+
+                <h3>Example</h3>
+
+                <pre>
+                    <code>
+                        let counter = 1;
+
+                        while (counter <= 5) {
+                            console.log("Counter:", counter);
+                            counter++;
+                        }
+                    </code>
+                </pre>
+
+                <p>
+                    This loop prints numbers from 1 to 5. After each iteration, 
+                    the value of <code>counter</code> increases until the condition 
+                    becomes false.
+                </p>
+
+            </article>
+
+        </section>
+
+        <section class="lesson-section">
+
+            <h2>The Do...While Loop</h2>
+
+            <p>
+                The <code>do...while</code> loop works similarly to the while loop 
+                but with one important difference.
+            </p>
+
+            <p>
+                The code block executes <strong>before</strong> the condition is 
+                evaluated. This guarantees that the loop will run <strong>at least 
+                one time</strong>.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <pre>
+                <code>
+                    do {
+                        // code to execute
+                    } while (condition);
+                </code>
+            </pre>
+
+            <article class="example">
+
+                <h3>Example</h3>
+
+                <pre>
+                    <code>
+                        let counter = 1;
+
+                        do {
+                            console.log("Counter:", counter);
+                            counter++;
+                        } while (counter <= 5);
+                    </code>
+                </pre>
+
+                <p>
+                    Even if the condition eventually becomes false, the code inside 
+                    the <code>do</code> block will execute first.
+                </p>
+
+            </article>
+
+        </section>
+
+        <section class="lesson-section">
+
+            <h2>Key Differences</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>While Loop</th>
+                        <th>Do...While Loop</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Condition check</td>
+                        <td>Before execution</td>
+                        <td>After execution</td>
+                    </tr>
+
+                    <tr>
+                        <td>Minimum executions</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>Common use case</td>
+                        <td>When the loop may not run</td>
+                        <td>When the loop must run at least once</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="lesson-section">
+
+            <h2>Example Showing the Difference</h2>
+
+            <pre>
+                <code>
+                    let number = 10;
+
+                    while (number < 5) {
+                        console.log("This will never run");
+                    }
+                </code>
+            </pre>
+
+            <p>
+                Because the condition is false initially, the loop does not execute.
+            </p>
+
+            <pre>
+                <code>
+                    let number = 10;
+
+                    do {
+                        console.log("This runs once");
+                    } while (number < 5);
+                </code>
+            </pre>
+
+            <p>
+                Even though the condition is false, the code executes once because
+                the condition is checked after the first execution.
+            </p>
+
+        </section>
+
+        <section class="lesson-section conclusion">
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Both loops are useful when the number of iterations is unknown.
+            </p>
+
+            <ul>
+                <li>Use <strong>while</strong> when the condition must be validated first.</li>
+                <li>Use <strong>do...while</strong> when the code must execute at least once.</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>JavaScript Fundamentals — Loops Lesson</p>
+    </footer>
+
+</body>
+
+</html>
