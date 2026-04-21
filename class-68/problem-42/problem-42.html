@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Challenge - do...while</title>
+    <link rel="stylesheet" href="problem-42.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Programming Challenge</h1>
+        <p class="header__subtitle">
+            ATM Withdrawal Simulation using <code>do...while</code>
+        </p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Problem Overview</h2>
+            <p>
+                In this challenge you will simulate a simple ATM withdrawal system.
+                The objective is to practice algorithmic thinking and understand 
+                how the <code>do...while</code> loop works in JavaScript.
+            </p>
+
+            <p>
+                The ATM starts with an initial balance and allows the user to 
+                withdraw money repeatedly until they decide to stop or the balance 
+                reaches zero. Because the operation must run at least once, the 
+                solution must use a <code>do...while</code> loop.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Scenario</h2>
+
+            <ul class="list">
+                <li>
+                    The ATM starts with an initial balance of <strong>$500</strong>.
+                </li>
+                <li>
+                    The system asks the user how much money they want to withdraw.
+                </li>
+                <li>
+                    If the withdrawal amount exceeds the balance, the system must 
+                    display an <strong>insufficient funds</strong> message.
+                </li>
+                <li>
+                    If the withdrawal is valid, the system updates and shows the 
+                    remaining balance.
+                </li>
+                <li>
+                    The user can continue making withdrawals until they choose to 
+                    stop.
+                </li>
+                <li>
+                    The program ends automatically if the balance becomes zero.
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="section">
+            <h2>Your Tasks</h2>
+
+            <div class="task">
+                <h3>1. Analyze the Problem</h3>
+                <p>Identify the following elements:</p>
+
+                <ul class="list">
+                    <li>Inputs</li>
+                    <li>Outputs</li>
+                    <li>Conditions</li>
+                    <li>Loop termination condition</li>
+                </ul>
+            </div>
+
+            <div class="task">
+                <h3>2. Design the Solution</h3>
+                <p>
+                    Create a <strong>flowchart</strong> that represents the algorithm 
+                    of the ATM system. Your flowchart should include:
+                </p>
+
+                <ul class="list">
+                    <li>Start and End nodes</li>
+                    <li>User input</li>
+                    <li>Decision conditions</li>
+                    <li>Balance updates</li>
+                    <li>The loop structure</li>
+                </ul>
+            </div>
+
+            <div class="task">
+                <h3>3. Implement the Solution</h3>
+
+                <p>Write a JavaScript program that:</p>
+
+                <ul class="list">
+                    <li>Uses a <code>do...while</code> loop</li>
+                    <li>Requests withdrawal amounts using <code>prompt()</code></li>
+                    <li>Displays messages using <code>alert()</code></li>
+                    <li>Validates the withdrawal amount</li>
+                    <li>Updates and displays the remaining balance</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+            <h2>Constraints</h2>
+
+            <ul class="list">
+                <li>The loop <strong>must use <code>do...while</code></strong>.</li>
+                <li>The balance <strong>cannot go below zero</strong>.</li>
+                <li>The program must execute <strong>at least once</strong>.</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Software Development Practice • Control Flow • JavaScript</p>
+    </footer>
+
+    <script type="application/javascript" src="./problem-42.js"></script>
+
+</body>
+
+</html>

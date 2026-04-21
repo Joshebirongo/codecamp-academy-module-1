@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Challenge - Password Verification</title>
+    <link rel="stylesheet" href="problem-44.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Programming Challenge</h1>
+        <p class="header__subtitle">
+            Password Verification using <code>do...while</code>
+        </p>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Problem Overview</h2>
+
+            <p>
+                In this challenge you will build a simple password verification
+                program. The program will repeatedly ask the user to enter a password
+                until the correct password is entered.
+            </p>
+
+            <p>
+                This exercise is designed to practice the <code>do...while</code>
+                loop, which guarantees that the code inside the loop runs at least
+                once before checking the condition.
+            </p>
+        </section>
+
+        <section class="section">
+
+            <h2>Scenario</h2>
+
+            <ul class="list">
+                <li>The system has a predefined password stored in the program.</li>
+                <li>The user must enter a password using <code>prompt()</code>.</li>
+                <li>If the password is incorrect, the system asks the user to try again.</li>
+                <li>The process repeats until the correct password is entered.</li>
+                <li>When the password is correct, the program displays an access granted message.</li>
+            </ul>
+
+        </section>
+
+        <section class="section">
+
+            <h2>Your Tasks</h2>
+
+            <div class="task">
+                <h3>1. Analyze the Problem</h3>
+
+                <ul class="list">
+                    <li>Identify the inputs</li>
+                    <li>Identify the outputs</li>
+                    <li>Determine the variables required</li>
+                    <li>Identify the loop termination condition</li>
+                </ul>
+            </div>
+
+            <div class="task">
+                <h3>2. Design the Algorithm</h3>
+
+                <p>Create a <strong>flowchart</strong> representing the program logic.</p>
+
+                <ul class="list">
+                    <li>Start and End nodes</li>
+                    <li>User input</li>
+                    <li>Password comparison</li>
+                    <li>Decision structure</li>
+                    <li>Loop repetition</li>
+                </ul>
+            </div>
+
+            <div class="task">
+                <h3>3. Implement the Solution</h3>
+
+                <ul class="list">
+                    <li>Use a <code>do...while</code> loop</li>
+                    <li>Ask for the password using <code>prompt()</code></li>
+                    <li>Compare the password with the correct one</li>
+                    <li>Display messages using <code>alert()</code></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2>Example Interaction</h2>
+
+            <pre class="code-block">
+                Enter the password: 1234
+                Incorrect password. Try again.
+
+                Enter the password: 1111
+                Incorrect password. Try again.
+
+                Enter the password: admin123
+                Access granted!
+            </pre>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>JavaScript Practice • Control Flow • Iterations</p>
+    </footer>
+
+    <script type="application/javascript" src="./problem-44.js"></script>
+
+</body>
+
+</html>

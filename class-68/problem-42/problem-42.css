@@ -1,0 +1,101 @@
+/* ==============================
+Base Styles
+============================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+
+/* ==============================
+Layout
+============================== */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+/* ==============================
+Header
+============================== */
+
+.header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header__subtitle {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+
+/* ==============================
+Sections
+============================== */
+
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+
+/* ==============================
+Tasks
+============================== */
+
+.task {
+    margin-top: 20px;
+}
+
+
+/* ==============================
+Lists
+============================== */
+
+.list {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+Footer
+============================== */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
