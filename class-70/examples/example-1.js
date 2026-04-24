@@ -10,7 +10,7 @@
 let numbers = [34, 54, 76, 65434, 12];
 console.log(`
     The array: ${numbers}
-    Array lengyh: ${numbers.length}
+    Array length: ${numbers.length}
     First element: ${numbers[0]}
     Last Element: ${numbers[4]}
     Last Element: ${numbers[numbers.length - 1]}
