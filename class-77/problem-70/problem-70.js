@@ -2,6 +2,11 @@
         Problem: Delivery Cost Calculator 
 */
 
+/**
+ * Give the total cost for 10km
+ * @param {number} distance
+ * @returns {number}
+ */
 function calculateDeliveryCost(distance) {
   const baseFee = 5;
   const costPerKm = 2;
