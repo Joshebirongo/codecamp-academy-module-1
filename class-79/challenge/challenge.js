@@ -1,4 +1,4 @@
-// Muliri Shebirongo Jonathan <Joshebirongo>
+// Author: Muliri Shebirongo Jonathan <Joshebirongo>
 
 const footballer = {
   personalInfo: {
