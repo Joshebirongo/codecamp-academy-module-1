@@ -1,4 +1,5 @@
 // Author: Muliri Shebirongo Jonathan <Joshebirongo>
+
 class ShoppingCart {
   constructor(customerName, productName, productPrice, quantity) {
     this.customerName = customerName;
