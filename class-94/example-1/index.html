@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            transition: 0.3s ease;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+
+            border-radius: 12px;
+
+            transition: 0.3s ease;
+        }
+
+        button {
+            margin-top: 20px;
+
+            padding: 10px 15px;
+
+            border: none;
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 16px;
+        }
+
+        /* LIGHT MODE */
+        .light {
+            background: #f4f4f4;
+            color: #111;
+        }
+
+        .light .container {
+            background: white;
+        }
+
+        .light button {
+            background: #111;
+            color: white;
+        }
+
+        .light svg {
+            color: white;
+        }
+
+        /* DARK MODE */
+        .dark {
+            background: #111;
+            color: white;
+        }
+
+        .dark .container {
+            background: #1e1e1e;
+        }
+
+        .dark button {
+            background: white;
+            color: black;
+        }
+
+        .dark svg {
+            color: black;
+            /* 👈 FIX HERE */
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <div class="container">
+
+        <h1>Theme Switcher</h1>
+
+        <p>
+            Click to toggle dark mode
+
+            15:36
+            PluginTeleprompter displays a smooth auto-scrolling script for recording,
+            presentations, public speaking, or any situation where text needs to be read continuously.
+        </p>
+
+
+        <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" fill="black"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="1" xmlns="http://w3.org">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg> -->
+
+
+        <button id="toggleBtn">
+
+            <span id="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21.64 13a9 9 0 11-10.63-10.63A9 9 0 0021.64 13z" />
+                </svg>
+            </span>
+            Toggle Theme
+        </button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
